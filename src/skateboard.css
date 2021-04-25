@@ -1,0 +1,223 @@
+* {
+    font-family: Roboto-Regular, HelveticaNeue, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+  }
+  
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30 30 30);
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .App {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 1);
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .worldContainer {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #colorWave {
+    position: absolute;
+    width: 400%;
+    background: #000;
+    height: 75vh;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+  }
+  
+  #textContainer {
+    position: absolute;
+    width: 400%;
+    background: #000;
+    height: 20vh;
+    top: 0;
+    display: flex;
+  }
+  
+  #text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100%;
+  }
+  
+  #firstName {
+    color: #181818;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 20vh;
+    height: 20vh;
+    line-height: 18vh;
+    width: 400px;
+    padding-left: 10px;
+    overflow: hidden;
+  }
+  
+  #lastName {
+    color: #181818;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 20vh;
+    padding-left: 40px;
+    width: 400px;
+    line-height: 18vh;
+    height: 20vh;
+    overflow: hidden;
+  }
+  
+  #colorWaveDiv {
+    position: relative;
+    width: 400px;
+    height: 100%;
+  }
+  
+  #profile {
+    position: absolute;
+    width: 50%;
+    height: 7%;
+    top: 86%;
+    left: 25%;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    word-spacing: 7px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 30px;
+    color: #111111;
+    box-shadow: 0px 0px 36px -14px rgba(0, 0, 0, 0.72);
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 37.5vh;
+  }
+  
+  #containerName {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    color: #fff;
+    line-height: 27px;
+  }
+  
+  #finalist {
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    top: 34vh;
+    font-weight: bold;
+    font-size: 2.4vh;
+    font-family: "Oswald", sans-serif;
+    transition: 0.4s;
+  }
+  
+  #finalistcontainer {
+    position: absolute;
+    width: 400px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ffffff42;
+    top: calc(50vh - 25px);
+    left: 10px;
+    padding-top: 6px;
+  }
+  
+  #right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ffffff42;
+    top: calc(50vh - 25px);
+    right: 10px;
+    padding-top: 6px;
+  }
+  
+  #menu {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ffffff59;
+    right: 10px;
+    top: 19px;
+    padding-top: 4px;
+  }
+  
+  #infoContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 113px;
+      padding-top:10px;
+  }
+  
+  #info {
+    font-weight: bold;
+    font-size: 2vh;
+    font-family: "Oswald", sans-serif;
+    color: #ffffff4f;
+    margin-top: 2vh;
+  }
+  
+  #data {
+    font-size: 4vh;
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    display: flex;
+  }
+  
+  #cross {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ffffff59;
+    top: 19px;
+    padding-top: 4px;
+    z-index: 10;
+    left: 341px;
+  }
+  
+  #socials {
+      margin-top:9px;
+    margin-right: 23px;
+  }
+  
