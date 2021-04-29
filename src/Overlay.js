@@ -36,7 +36,6 @@ export default function Overlay({ fill }) {
           <tspan x={40} y={576.909} children="Dropin to the future;" />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10.5} fontWeight={500} letterSpacing="0em">
-        <tspan x={326} y={640.318} children="" />
         </text>
       </a.svg>
     </div>

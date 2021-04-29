@@ -1,13 +1,20 @@
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useState, useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useLoader } from '@react-three/fiber'
 import { PerspectiveCamera, Environment, MeshDistortMaterial, ContactShadows } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import deck from './teamneon.glb'
 
 // React-spring animates native elements, in this case <mesh/> etc,
 // but it can also handle 3rd–party objs, just wrap them in "a".
 const AnimatedMaterial = a(MeshDistortMaterial)
+
+function Duck() {
+  const gltf = useLoader(GLTFLoader, deck)
+  return <primitive object={gltf.scene} position={[0, -1, 0]} scale={[.6, .6, .6]} rotation={[0,0,0]} />
+}
 
 export default function Scene({ setBg }) {
   const sphere = useRef()
@@ -44,7 +51,7 @@ export default function Scene({ setBg }) {
   // React-spring is physics based and turns static props into animated values
   const [{ wobble, coat, color, ambient, env }] = useSpring(
     {
-      wobble: down ? 1.2 : hovered ? 1.05 : 1,
+      wobble: down ? 1.1 : hovered ? 1.05 : 1,
       coat: mode && !hovered ? 0.04 : 1,
       ambient: mode && !hovered ? 1.5 : 0.5,
       env: mode && !hovered ? 0.4 : 1,
@@ -73,8 +80,9 @@ export default function Scene({ setBg }) {
             setMode(!mode)
             setBg({ background: !mode ? '#202020' : '#f0f0f0', fill: !mode ? '#f0f0f0' : '#202020' })
           }}>
-          <sphereBufferGeometry args={[1, 64, 64]} />
+          <Duck />
           <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0} metalness={0.1} />
+
         </a.mesh>
         <Environment preset="warehouse" />
         <ContactShadows
