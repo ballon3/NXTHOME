@@ -1,7 +1,12 @@
-const { Component, useState } = React;
-const { to, animated, useSpring } = ReactSpring;
-const { useDrag } = ReactUseGesture;
+import { Component, useState } from 'react'
+import * as THREE from 'three'
+import * as d3 from "d3";
+import { useSpring, animated, to } from '@react-spring/core'
+import { useDrag } from 'react-use-gesture'
+
+
 const PI = Math.PI;
+
 const finalistColor = {
   "0": "#f89eab",
   "-400": "#ceb7ff",
@@ -216,6 +221,7 @@ class App2 extends Component {
     const Scene = this.group;
     const DeckArray = this.deckArray;
     const active = this.props.active;
+    
     mtlloader.load(data, (materials) => {
       materials.preload();
       loader.setMaterials(materials);
@@ -540,4 +546,4 @@ const PlayerInfo = ({ trans, handleStat }) => {
   );
 };
 
-ReactDOM.render(<App2 />, document.getElementById("root"));
+export default App2;
