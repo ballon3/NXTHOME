@@ -1,0 +1,5 @@
+{
+    "tableName": "nxts",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}

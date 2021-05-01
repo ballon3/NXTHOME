@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "nxtdynamo": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

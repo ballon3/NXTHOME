@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/nxt",
+            "lambdaFunction": "nxtfuncv1",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/nxt"
+        }
+    ],
+    "resourceName": "nxtapi",
+    "apiName": "nxtapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "nxtfuncv1"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-nxthome-dev-24404-authRole",
+        "unAuthRoleName": "amplify-nxthome-dev-24404-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "nxtfuncv1",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
